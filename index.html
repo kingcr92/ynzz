@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>文件分享站</title>
+  <meta name="description" content="文件分享与下载" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">📂 文件分享站</h1>
+      <p class="site-subtitle">浏览并下载共享的文件</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <input
+        type="search"
+        id="search"
+        class="search-input"
+        placeholder="🔍 搜索文件名..."
+        autocomplete="off"
+      />
+      <div class="view-toggle" role="group" aria-label="视图切换">
+        <button class="toggle-btn active" data-view="list" title="列表视图">☰</button>
+        <button class="toggle-btn" data-view="grid" title="网格视图">▦</button>
+      </div>
+    </div>
+
+    <div id="file-list" class="file-list" aria-live="polite"></div>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <p>📭 暂无文件</p>
+      <span>请把文件放入 files 目录后重新生成清单。</span>
+    </div>
+
+    <div id="no-results" class="empty-state" hidden>
+      <p>🔍 没有匹配的文件</p>
+      <span>试试其它关键词。</span>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>由 <a href="https://github.com" target="_blank" rel="noopener">免费静态托管</a> 提供支持 · 仅供学习交流</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
